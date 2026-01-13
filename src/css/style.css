@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("./variables.css");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--grey-100);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 840px;
+}
+
+.main-card {
+  background-color: var(--white);
+  border-radius: 24px 24px 100px 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 56px;
+  width: 100%;
+}
+
+.inputs {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 160px;
+}
+
+.input-group .label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--grey-500);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.input-group input {
+  padding: 12px 24px;
+  border: 1px solid var(--grey-200);
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: var(--grey-500);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--purple-500);
+}
+
+.linha-com-botao {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.linha-com-botao::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--grey-200);
+}
+
+.botao {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--purple-500);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  margin-left: 16px;
+}
+
+.botao:active {
+  transform: scale(0.95);
+}
+
+.botao:hover {
+  background-color: var(--black);
+}
+
+.arrow-img {
+  width: 44px;
+  height: auto;
+}
+
+.age-result h1 {
+  font-size: 104px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+.age-result span {
+  color: var(--purple-500);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-card {
+    padding: 48px 24px;
+    border-radius: 24px 24px 80px 24px;
+  }
+
+  .inputs {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .input-group input {
+    padding: 12px 16px;
+    font-size: 20px;
+  }
+
+  .linha-com-botao {
+    position: relative;
+    height: 64px;
+    justify-content: center;
+  }
+
+  .linha-com-botao::before {
+    margin-right: 0;
+  }
+  .botao {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin-left: 0;
+  }
+
+  .arrow-img {
+    width: 24px;
+  }
+
+  .age-result h1 {
+    font-size: 56px;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: none;
+  margin-top: 5px;
+}

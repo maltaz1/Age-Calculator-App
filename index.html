@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/variables.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-card">
+        <section class="inputs">
+          <div class="input-group">
+            <label for="input-day" class="label">Day</label>
+            <input id="input-day" type="number" placeholder="DD" />
+            <label for="input-month" class="error">Must be a valid date</label>
+          </div>
+          <div class="input-group">
+            <label for="input-month" class="label">Month</label>
+            <input id="input-month" type="number" placeholder="MM" />
+          </div>
+          <div class="input-group">
+            <label for="input-year" class="label">Year</label>
+            <input id="input-year" type="number" placeholder="YYYY" />
+          </div>
+        </section>
+        <div class="linha-com-botao">
+          <button class="botao" id="arrow-btn">
+            <img
+              class="arrow-img"
+              src="./src/images/icon-arrow.svg"
+              alt="icon-arrow"
+            />
+          </button>
+        </div>
+        <section class="age-result">
+          <div>
+            <h1><span id="years" class="years">--</span>years</h1>
+            <h1><span id="months" class="months">--</span>months</h1>
+            <h1><span id="days" class="days">--</span>days</h1>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
